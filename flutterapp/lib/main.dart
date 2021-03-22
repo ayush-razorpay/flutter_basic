@@ -67,10 +67,10 @@ class MyCustomFormState extends State<MyCustomForm> {
               } else {
                 var _razorpay = Razorpay();
                 var options = {
-                  'key': 'rzp_live_gM2B9AtiieU4AC',
-                  'amount': 100,
+                  'key': 'rzp_test_oJPbj9rC1rDGAQ',
+                  'amount': value,
                   'name': 'Intelij Bussiness Services.',
-                  'order_id': value,
+                  //'order_id': value,
                   'description': 'Customised IDE ',
                   'prefill': {
                     'contact': '7387920849',
