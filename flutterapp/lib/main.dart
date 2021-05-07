@@ -67,14 +67,46 @@ class MyCustomFormState extends State<MyCustomForm> {
               } else {
                 var _razorpay = Razorpay();
                 var options = {
-                  'key': 'rzp_test_oJPbj9rC1rDGAQ',
-                  'amount': value,
-                  'name': 'Intelij Bussiness Services.',
-                  //'order_id': value,
-                  'description': 'Customised IDE ',
-                  'prefill': {
-                    'contact': '7387920849',
-                    'email': 'ayush.vipul@razorpay.com'
+                  "key": "rzp_test_oJPbj9rC1rDGAQ",
+                  "currency": "INR",
+                  "image": "https://rzp-prod-outline-wiki.s3-ap-southeast-1.amazonaws.com/favicon.png",
+                  "name": null,
+                  "description": null,
+                  "amount": 100,
+                  "notes": null,
+                  "tnxType": "order_id",
+                  "tnx_id": null,
+                  "retry": true,
+                  "max_count": "3",
+                  "enableTimeout": false,
+                  "theme": {
+                    "color": "#1a6534"
+                  },
+                  "config": {
+                    "display": {
+                      "blocks": {
+                        "block1": {
+                          "name": "Primary Payments",
+                          "instruments": [
+                            {
+                              "method": "card"
+                            },
+                            {
+                              "method": "netbanking"
+                            },
+					                  {
+						                   "method": "upi"
+						                }
+                          ]
+                        }
+                      },
+                      "sequence": [
+                        "block.block1"
+                      ],
+                      "preferences": {
+                        "show_default_blocks": false
+                      }
+                    }
                   }
                 };
 
